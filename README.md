@@ -1,7 +1,8 @@
 # Dotfiles
 
 These are mine.
-Tracked using StreakyCobra's dope method:
+Tracked using StreakyCobra's dope method:  
+https://news.ycombinator.com/item?id=11070797
 
 ```
 I use:
