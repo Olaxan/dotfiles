@@ -17,3 +17,5 @@ where my ~/.myconf directory is a git bare repository. Then any file within the 
     config commit -m "Add redshift config"
     config push
 ```
+
+If you've landed here, may you find what you seek!
