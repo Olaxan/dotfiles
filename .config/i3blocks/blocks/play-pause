@@ -1,0 +1,6 @@
+#!/bin/bash
+
+PLAYERS="${PLAYERS:-spotify}"
+
+playerctl -p $PLAYERS play-pause
+[[ `playerctl -p $PLAYERS status` = "Playing" ]] && (echo "") || (echo "")

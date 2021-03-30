@@ -1,0 +1,76 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+
+command=$HOME/.config/i3blocks/blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+# Generic media player support
+#
+# This displays "ARTIST - SONG" if a music is playing.
+# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
+
+[mediaplayer]
+instance=spotify
+interval=5
+signal=10
+separator=true
+
+[skipback]
+full_text=
+interval=0
+command=playerctl -p spotify previous
+separator=false
+
+[play-pause]
+full_text=
+interval=0
+separator=false
+
+[next]
+full_text=
+interval=0
+command=playerctl next
+separator=false
+
+# The first parameter sets the step (and units to display)
+# The second parameter overrides the mixer selection
+# See the script for details.
+
+[volume]
+label= 
+interval=once
+signal=10
+STEP=5%
+
+# Date Time
+#
+[time]
+label= 
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=5

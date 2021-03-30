@@ -1,0 +1,118 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+## label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+
+command=$HOME/.config/i3blocks/blocks/$BLOCK_NAME
+separator_block_width=0
+markup=pango
+separator=false
+
+[mediaplayer]
+instance=spotify
+interval=5
+signal=10
+separator=true
+min_width=1000
+align=center
+
+#[volume]
+#label= 
+#interval=once
+#signal=10
+#STEP=5%
+#min_width=100
+#align=center
+
+[usb]
+markup=pango
+signal=1
+interval=10
+#IGNORE_LIST=["sda", "/dev/nvme0n1"]
+INFO_TEXT_COLOR=white
+BAR_COLOR=xresource:color0
+PREV_COLOR=xresource:color0
+NEXT_COLOR=xresource:color0
+MOUNTED_COLOR=green
+PLUGGED_COLOR=gray
+LOCKED_COLOR=gray
+UNLOCKED_NOT_MOUNTED_COLOR=yellow
+PARTITIONLESS_COLOR=red
+PARTITIONLESS_TEXT=no partitions
+SEPARATOR=<span color='gray'> | </span>
+LOCKED_INDICATOR= 
+UNLOCKED_INDICATOR= 
+READONLY_INDICATOR=ro
+#TRUNCATE_FS_LABELS=[not set by default, accepts +/- integers]
+
+[arch-update]
+interval=3600
+markup=pango
+ICON= 
+AUR=true
+QUIET=true
+TEXT_COLOR=black
+BAR_COLOR=orange
+
+[memory]
+ICON=
+COLOR=xresource:color7
+NEXT_COLOR=xresource:color0
+TEXT_COLOR=xresource:color0
+interval=30
+
+# The script may be called with -w and -c switches to specify thresholds,
+
+[cpu_usage]
+ICON=  
+interval=10
+#BAR_COLOR=xresource:color4
+BAR_COLOR=xresource:color0
+NEXT_COLOR=xresource:color7
+TEXT_COLOR=white
+min_width=120
+
+# The directory defaults to $HOME if the instance is not specified.
+# The script may be called with a optional argument to set the alert
+# (defaults to 10 for 10%).
+
+[disk]
+interval=30
+ICON= 
+BAR_COLOR=xresource:color7
+TEXT_COLOR=xresource:color0
+NEXT_COLOR=xresource:color0
+
+# If the instance is not specified, use the interface used for default route.
+# The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
+
+[iface]
+markup=pango
+ICON=
+interval=10
+COLOR=xresource:color0
+NEXT_COLOR=xresource:color7
+#cornflower blue

@@ -1,0 +1,42 @@
+! special
+*.foreground:   #d2c9ab
+*.background:   #11100b
+*.cursorColor:  #d2c9ab
+
+! black
+*.color0:       #1b1a14
+*.color8:       #ea3c36
+
+! red
+*.color1:       #24221c
+*.color9:       #ef807e
+
+! green
+*.color2:       #36332a
+*.color10:      #ef8d8b
+
+! yellow
+*.color3:       #4e4b3e
+*.color11:      #759be3
+
+! blue
+*.color4:       #6d6857
+*.color12:      #7f9edc
+
+! magenta
+*.color5:       #928b76
+*.color13:      #799bde
+
+! cyan
+*.color6:       #bcb499
+*.color14:      #f23830
+
+! white
+*.color7:       #ebe2c5
+*.color15:      #8e7e3a
+  
+! URxvt Appearance
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt*font: xft:xos4 Terminess Powerline:style=Regular:size=10
+URxvt*boldFont: xft:xos4 Terminess Powerline:style=Bold:size=10
