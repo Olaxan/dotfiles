@@ -19,3 +19,5 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="${PATH}:${HOME}/.dotnet/tools/"
 
 export FrameworkPathOverride=/etc/mono/4.5
+
+cat /home/fredr/.cache/wal/sequences

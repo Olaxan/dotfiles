@@ -225,6 +225,8 @@ bindsym $mod+Up exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% &&
 bindsym $mod+Down exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 
 bindsym Print exec maim -s | xclip -selection clipboard -t image/png
+bindsym Shift+Print exec maim -i $(xdotool getactivewindow) ~/pics/window.png
+bindsym $mod+Shift+Print exec sleep 5 && maim ~/pics/screen.png
 bindsym $mod+Print exec maim -st 0 | convert - -resize 1x1\! -format '%[pixel:p{0,0}]' info:- | xclip -selection c
 
 workspace $ws1 output DP-4
@@ -237,7 +239,7 @@ assign [class="spotify"] $ws2
 assign [class="discord"] $ws3
 
 #exec --no-startup-id exec bash $HOME/.fehbg
-exec --no-startup-id wal -R
+exec --no-startup-id wal -i "$(< "${HOME}/.cache/wal/wal")"
 exec --no-startup-id autocutsel
 exec --no-startup-id picom -b --experimental-backends --backend glx
 exec --no-startup-id udiskie -ans
